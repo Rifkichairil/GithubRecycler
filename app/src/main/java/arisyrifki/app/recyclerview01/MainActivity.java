@@ -16,6 +16,11 @@ import arisyrifki.app.recyclerview01.Model.ModelData;
  * Created by rfkchrl on 12/7/2018.
  */
 
+// langkah paling awal setelah buat project
+    // file -> Project Structure -> app -> Dependeces
+    //terkadang appcompactnya diganti menjadi V7.26
+    //untuk menambahkan klik icon +, dan mengurangi klik yg akan dikurangi lalu klik icon -
+    //jangan lupa MainActivitynya didaftarkan ke manifest
 public class MainActivity extends AppCompatActivity {
 
     public List<ModelData> data = new ArrayList<>();

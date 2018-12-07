@@ -15,6 +15,8 @@ import arisyrifki.app.recyclerview01.R;
  */
 
 public class AdapterData extends RecyclerView.Adapter<HolderData> {
+
+    //membuat list untuk datanya.
     private List<ModelData> data;
 
     //construktor
@@ -24,7 +26,7 @@ public class AdapterData extends RecyclerView.Adapter<HolderData> {
 
     @Override
     public HolderData onCreateViewHolder(ViewGroup parent, int viewType) {
-        //mengembalikan ... dan mencari item_data
+        //mengembalikan Holder ... dan mencari item_data
         return new HolderData(LayoutInflater.from(parent.getContext()).inflate(R.layout.item_data,parent,false));
     }
 
@@ -32,6 +34,8 @@ public class AdapterData extends RecyclerView.Adapter<HolderData> {
     public void onBindViewHolder(HolderData holder, int position) {
         //set TextView yang di holder menjadi public agar dapat diakses disini. (Holder)
         //set method menjadi string jika tulisan. (Model)
+        //txtName dari Model dan Holder, penulisan disamakan agar mempermudah
+        //sedangkan data dari list dan GetTxt... dari Model
         holder.txtName.setText(data.get(position).getTxtName());
         holder.txtSubname.setText(data.get(position).getTxtSubname());
 
